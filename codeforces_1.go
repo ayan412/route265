@@ -8,7 +8,9 @@ func main() {
 	fmt.Scan(&t)
 	for i := 1; i <= t; i++ {
 		fmt.Scan(&a, &b)
-		c = a + b
-		fmt.Println(c)
+		if (a >= -1000 && a <= 1000) && (b >= -1000 && b <= 1000) {
+			c = a + b
+			fmt.Println(c)
+		}
 	}
 }
