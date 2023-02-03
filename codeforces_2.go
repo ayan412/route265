@@ -3,18 +3,24 @@ package main
 import "fmt"
 
 func main() {
+	
 	var t, n, p int 
 	fmt.Scan(&t) //кол-во наборов входных данных
-	for i := 1; i <= t; i++ {
+
+	var Items []int = make([]int, n) // n кол-во купленных товаров
+
+	for i:=0; i<t;i++ {
 		fmt.Scan(&n)
-		// for i:=1;i<=n;i++ {
-			
-		// }
-		var Items []int = make([]int, n)
-		fmt.Scan(&p)
-		for i:=1;i<=n;i++ {
+		for i:=0;i<n;i++ {
+			fmt.Scan(&p)
 			Items = append(Items, p)
-		}  
+		}
+		
 	}
-fmt.Println(t, n, p)
+	sum := 0
+	for _, val := range Items {
+		sum += val
+	}
+
+fmt.Println(t, n, sum)
 }
